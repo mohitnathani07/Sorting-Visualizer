@@ -173,9 +173,9 @@ def insertion_sort(array):
 
     return numbers
 
-speed_dic = {"slowest": 1,
-             "medium": 0.5,
-             "fast": 0.3,
+speed_dic = {"slowest": 0.7,
+             "medium": 0.3,
+             "fast": 0.2,
              }
 
 
