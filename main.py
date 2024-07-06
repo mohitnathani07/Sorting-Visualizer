@@ -8,7 +8,7 @@ st.title("Sorting Visualizer")
 n = st.slider("select the number of elements in the array", 5, 30, step=5)
 speed = st.select_slider(
     "Select the speed",
-    options=["slowest", "slow", "medium", "fast", "fastest"]
+    options=["slow", "medium", "fast"]
 )
 select_algorithm = st.selectbox(
     "Select the Sorting Algorithm",
@@ -119,13 +119,6 @@ def merge_visualizer(numbers, list_of_index, n, speed):
     return ans
 
 
-speed_dic = {"slowest": 1,
-             "slow": 0.5,
-             "medium": 0.1,
-             "fast": 0.001,
-             "fastest": 0.0001}
-
-
 def selection_sort(numbers):
     for i in range(len(numbers)):
         color_list = ["blue"] * len(numbers)
@@ -179,6 +172,11 @@ def insertion_sort(array):
         plot_numbers(numbers, color_list)
 
     return numbers
+
+speed_dic = {"slowest": 1,
+             "medium": 0.5,
+             "fast": 0.3,
+             }
 
 
 if start:
